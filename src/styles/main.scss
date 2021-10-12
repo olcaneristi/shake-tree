@@ -12,4 +12,7 @@
 .App {
   background-color: $bg-primary-color;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
