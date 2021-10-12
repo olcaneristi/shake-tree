@@ -1,0 +1,53 @@
+.basket {
+  position: relative;
+  width: 8rem;
+  margin-left: auto;
+  margin-right: 5rem;
+
+  &__falling__apples {
+    position: absolute;
+    top: 30%;
+    left: 6%;
+    z-index: $z-index-active;
+
+    img {
+      width: 1.3rem;
+      margin-right: -0.75rem;
+      right: 0;
+    }
+  }
+
+  &__transition-enter {
+    opacity: 0;
+
+    &-active {
+      transition: opacity 1500ms ease-in;
+      animation-name: fadeEnter;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  .basket__transition-enter-active:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.2}s;
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+    transform: translate(-6.25rem, -6.25rem);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(0, -6.25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

@@ -1,0 +1,15 @@
+@import './globals/';
+@import './components';
+@import './elements/';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-default;
+}
+
+.App {
+  background-color: $bg-primary-color;
+  min-height: 100vh;
+}

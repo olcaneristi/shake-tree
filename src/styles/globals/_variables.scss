@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+// fonts
+
+$font-default: 'Nunito', sans-serif;
+$font-size-default: 1rem;
+$font-light: 400;
+$font-normal: 500;
+$font-bold: 700;
+
+// colors
+
+$color-primary: '';
+$color-secondary: '';
+$color-tertiary: '';
+$color-white: rgb(255, 255, 255);
+$color-gray: rgb(204, 204, 204);
+$color-black: rgb(0, 0, 0);
+
+// bg colors
+
+$bg-primary-color: rgb(39, 48, 66);
+$bg-button-primary: rgb(38, 136, 67);
+$bg-button-disabled: rgb(179, 75, 75);
+
+// border radius
+
+$radius-sm: 0.375rem;
+$radius-default: 0.5rem;
+$radius-circle: 100%;
+
+// z-index
+
+$z-index-default: 0;
+$z-index-active: 1;
+$z-index-big: 2;

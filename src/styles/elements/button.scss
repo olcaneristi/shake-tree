@@ -1,0 +1,38 @@
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: $color-white;
+  color: $color-black;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &__shake,
+  &__shake--disabled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: ($font-size-default + 0.1rem);
+  }
+
+  &__shake {
+    background-color: $bg-button-primary;
+    color: $color-white;
+
+    &--disabled {
+      background-color: rgb(179, 75, 75) !important;
+      color: $color-gray;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  img {
+    width: 16px;
+    margin-right: 0.5rem;
+  }
+}
