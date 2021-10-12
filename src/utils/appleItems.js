@@ -81,4 +81,4 @@ export const data = [
   },
 ];
 
-export const randomNumberGenerator = Math.floor(Math.random() * 4);
+export const randomNumberGenerator = ~~(Math.random() * 5) + 1;
