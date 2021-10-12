@@ -7,7 +7,7 @@ function TreeSVG(props) {
       viewBox="0 0 216.55 243.8"
       className="prefix__tree__svg"
       width={750}
-      height={750.378}
+      height={650}
       {...props}
     >
       <defs>
