@@ -15,7 +15,7 @@ const Basket = () => {
       <TransitionGroup className="basket__falling__apples">
         {basket?.map(appleOnBasket => (
           // react-transition-group paketi ile sepete düşecek elmalara animasyon tanımlıyorum.
-          <CSSTransition key={appleOnBasket?.id} timeout={3000} classNames="basket__transition">
+          <CSSTransition key={appleOnBasket?.id} timeout={5000} classNames="basket__transition">
             <Apple alt="apples on basket" />
           </CSSTransition>
         ))}

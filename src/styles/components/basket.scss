@@ -32,7 +32,7 @@
 
 @for $i from 1 through 10 {
   .basket__transition-enter-active:nth-child(#{$i}n) {
-    animation-delay: #{$i * 0.2}s;
+    animation-delay: #{$i * 0.4}s;
   }
 }
 
