@@ -21,7 +21,7 @@ const App = () => {
       setTimeout(() => {
         dispatch(fallApples(randomNumberGenerator));
         setShakeTree(false);
-      }, 3000);
+      }, 2500);
     } catch (error) {
       setShakeTree(false);
       toast.error(error);
@@ -43,7 +43,7 @@ const App = () => {
     shakeTreeFunc();
     setTimeout(() => {
       dropAppleToBasketFunc();
-    }, 5000);
+    }, 3500);
   };
 
   return (
