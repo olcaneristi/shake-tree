@@ -6,13 +6,15 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Basket = () => {
   const fallenApplesOnBasket = useSelector(state => state.apples);
-  const { basket } = fallenApplesOnBasket;
+  const { basket, error } = fallenApplesOnBasket; // sepete eklenecek elmaları çağırıyorum.
   console.log('falling apples on basket', basket);
 
   return (
     <section className="basket">
+      {error && <p>{error.message}</p>}
       <TransitionGroup className="basket__falling__apples">
         {basket?.map(appleOnBasket => (
+          // react-transition-group paketi ile sepete düşecek elmalara animasyon tanımlıyorum.
           <CSSTransition key={appleOnBasket?.id} timeout={3000} classNames="basket__transition">
             <img src={AppleSVG} alt="apples on basket" />
           </CSSTransition>

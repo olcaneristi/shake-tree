@@ -1,3 +1,4 @@
+// tüm elmaların dummy datası
 export const data = [
   {
     id: 1,
@@ -81,4 +82,5 @@ export const data = [
   },
 ];
 
+// ağaçtan düşecek ve sepete eklenecek elma sayısını 1 ila 5 arasında belirleyeceğimiz fonksiyonumuz.
 export const randomNumberGenerator = ~~(Math.random() * 5) + 1;
