@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './styles/main.scss';
 import { toast } from 'react-toastify';
 import { getApples, fallApples } from './redux/actions/';
 import { randomNumberGenerator } from './utils/appleItems';

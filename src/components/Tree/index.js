@@ -7,7 +7,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const Tree = ({ shakeTree }) => {
   const allApplesData = useSelector(state => state.apples);
   const { allApples, error } = allApplesData;
-  console.log('apples items on tree', allApples);
+  // console.log('apples items on tree', allApples);
 
   return (
     <section className={shakeTree ? 'tree' : 'tree__not__shake'}>

@@ -7,7 +7,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const Basket = () => {
   const fallenApplesOnBasket = useSelector(state => state.apples);
   const { basket, error } = fallenApplesOnBasket; // sepete eklenecek elmaları çağırıyorum.
-  console.log('falling apples on basket', basket);
+  // console.log('falling apples on basket', basket);
 
   return (
     <section className="basket">
