@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { getApples, fallApples } from './redux/actions/';
+import { getApples, fallApples, resetAll } from './redux/actions/';
 import { randomNumberGenerator } from './utils/appleItems';
 import Warning from './assets/icons/warning.svg';
 import Apple from './assets/icons/apple.svg';
+import Reset from './assets/icons/reset.svg';
 
 import { Basket, ShakeButton, Tree } from './components';
 
@@ -55,27 +56,34 @@ const App = () => {
     }, 3500);
   };
 
+  const resetAllState = () => {
+    dispatch(resetAll());
+  };
+
   return (
     <div className="App">
       <Tree shakeTree={shakeTree} />{' '}
       {/* ağacın sallanması/durması için state'i Tree componentine yolladık ve className değişimi sağladık. */}
       <Basket />
-      {allApples.length === 0 ? ( // ağaçta elma kalmadığında kullanıcının butona daha fazla basmasına engel olacağız.
-        <ShakeButton
-          disabled
-          title="There is no more apple on the tree."
-          className="button__shake--disabled"
-          image={Warning}
-        />
-      ) : (
-        <ShakeButton
-          disabled={shakeTree}
-          onClick={startShaking}
-          title={shakeTree ? 'Shaking...' : 'Shake it!'}
-          className="button__shake"
-          image={Apple}
-        />
-      )}
+      <div className="buttons">
+        {allApples?.length === 0 ? ( // ağaçta elma kalmadığında kullanıcının butona daha fazla basmasına engel olacağız.
+          <ShakeButton
+            disabled
+            title="There is no more apple on the tree."
+            className="button__shake--disabled"
+            image={Warning}
+          />
+        ) : (
+          <ShakeButton
+            disabled={shakeTree}
+            onClick={startShaking}
+            title={shakeTree ? 'Shaking...' : 'Shake it!'}
+            className="button__shake"
+            image={Apple}
+          />
+        )}
+        <ShakeButton onClick={resetAllState} title="Reset" className="button__reset" image={Reset} />
+      </div>
     </div>
   );
 };

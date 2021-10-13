@@ -6,14 +6,16 @@
   border-radius: $radius-sm;
   cursor: pointer;
   transition: all 200ms ease-in-out;
+  width: 8rem;
 
   &__shake,
-  &__shake--disabled {
-    display: flex;
+  &__shake--disabled,
+  &__reset {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
     font-size: ($font-size-default + 0.1rem);
+    margin: 0 0.5rem;
   }
 
   &__shake {
@@ -23,7 +25,12 @@
     &--disabled {
       background-color: rgb(179, 75, 75) !important;
       color: $color-gray;
+      width: unset;
     }
+  }
+
+  &__reset {
+    font-weight: $font-bold;
   }
 
   &:disabled {

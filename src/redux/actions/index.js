@@ -24,3 +24,7 @@ export const fallApples = randomNumberGenerator => dispatch => {
     dispatch({ type: types.FALL_APPLES_ERROR, payload: toast.error(error.message) });
   }
 };
+
+export const resetAll = () => dispatch => {
+  dispatch({ type: types.RESET_ALL });
+};

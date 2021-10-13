@@ -53,6 +53,11 @@ export const appleReducer = (state = initialState, action) => {
         error: action.payload,
       };
 
+    case types.RESET_ALL:
+      return {
+        ...initialState,
+      };
+
     default:
       return state;
   }
