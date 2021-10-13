@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { getApples, fallApples, resetAll } from './redux/actions/';
 import { randomNumberGenerator } from './utils/appleItems';
 import Warning from './assets/icons/warning.svg';
@@ -57,11 +58,19 @@ const App = () => {
   };
 
   const resetAllState = () => {
-    dispatch(resetAll());
+    try {
+      if (allApples.length < 10) {
+        dispatch(resetAll());
+        toast.success('Reset successfully!');
+      } else toast.warning('All your apples on the tree. Please shake it!');
+    } catch (error) {
+      toast.error(error);
+    }
   };
 
   return (
     <div className="App">
+      <ToastContainer autoClose={3000} />
       <Tree shakeTree={shakeTree} />{' '}
       {/* ağacın sallanması/durması için state'i Tree componentine yolladık ve className değişimi sağladık. */}
       <Basket />
