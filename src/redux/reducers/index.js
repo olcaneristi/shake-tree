@@ -19,8 +19,10 @@ export const appleReducer = (state = initialState, action) => {
       };
     case types.FALL_APPLES_SUCCESS:
       const allApples = [...state.allApples];
-      //  let index = allApples.findIndex(i => i === action.payload);
-      allApples.splice(0, action.payload);
+      let index = allApples.findIndex(item => item.id !== action.payload);
+      console.log(index);
+      allApples.splice(index, action.payload);
+
       return { loading: false, ...state, allApples };
 
     case types.FALL_APPLES_ERROR: {
@@ -35,7 +37,7 @@ export const appleReducer = (state = initialState, action) => {
 
     case types.ADD_APPLES_TO_BASKET_SUCCESS: {
       const fallenApplesOnBasket = [...state.basket];
-      for (let appleArray = action.payload; appleArray > 0; appleArray--) {
+      for (let appleArray = 0; appleArray < action.payload; appleArray++) {
         fallenApplesOnBasket.push(state.allApples[appleArray]);
       }
       return { ...state, basket: fallenApplesOnBasket };
