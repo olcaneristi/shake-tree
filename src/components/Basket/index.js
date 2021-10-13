@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import BasketSVG from '../../assets/icons/basket.svg';
-import AppleSVG from '../../assets/icons/apple.svg';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import Apple from '../Apple';
 
 const Basket = () => {
   const fallenApplesOnBasket = useSelector(state => state.apples);
@@ -16,7 +16,7 @@ const Basket = () => {
         {basket?.map(appleOnBasket => (
           // react-transition-group paketi ile sepete düşecek elmalara animasyon tanımlıyorum.
           <CSSTransition key={appleOnBasket?.id} timeout={3000} classNames="basket__transition">
-            <img src={AppleSVG} alt="apples on basket" />
+            <Apple alt="apples on basket" />
           </CSSTransition>
         ))}
       </TransitionGroup>
