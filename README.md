@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+<div align="center">
+ <h2> Shake tree with animations </h2>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <h4>Story</h4>
+  <p align="center">
+ There is a tree with big, juicy and red apples on it. We want to collect those apples but we
+can&#39;t reach them. Because the tree is very high. We have to shake the tree to drop apples.
+After that, we can put the apples to our apple basket.
+  </p>
+  
+  <h4>Description</h4>
+  <p align="center">
+  There will be 4 objects on the screen. Apples, tree, basket and a button. You can use any
+image (SVG is plus) for these. After clicking the tree will shaking for 3 seconds. After shaking
+effect, more than one apple will be dropped in different time. The apples will appear on basket
+1 second later after dropped.
+Apple basket, tree, and apples must be separated into different components and they must
+talk to each other with local state or redux.
+  </p>
+</div>
+<br/>
 
-## Available Scripts
+<h3 align="center">
+  🚀 <a href="https://p-case.vercel.app/" target="_blank"> Demo </a>
+</h3>
 
-In the project directory, you can run:
+## 📷 Screenshot
 
-### `npm start`
+<div align="center">
+  <img alt="Demo" src="https://user-images.githubusercontent.com/45832621/137198870-9e8cb12f-dd56-48ab-a4ad-5bba48ab3378.gif"/>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🗳️ Checklist
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Requirements | 🧐 |
+| ------------------------ | ------- |
+| CRA        | ✅ |
+| Redux   | ✅  |
+| SASS   | ✅  |
+| Inline comments      | ✅ |
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🗂️ Packages used in this project
 
-### `npm run build`
+| Package                  | Version |
+| ------------------------ | ------- |
+| eslint                   | ^7.32.0 |
+| eslint-config-prettier   | ^8.3.0  |
+| eslint-plugin-prettier   | ^4.0.0  |
+| eslint-plugin-react      | ^7.26.1 |
+| eslint-plugin-react-hooks| ^4.2.0  |
+| prettier                 | ^2.4.1  |
+| react-redux              | ^7.2.5  |
+| react-toastify           | ^8.0.3  |
+| react-transition-group   | ^4.4.2  |
+| redux                    | ^4.1.1  |
+| redux-thunk              | ^2.3.0  |
+| sass                     | ^1.42.1 |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Install deps with NPM or Yarn:
 
-### `npm run eject`
+```bash
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#or
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+yarn
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. In the project directory, run the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run start
 
-## Learn More
+#or
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+yarn start
+```
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🚀 Build and Run for Production
 
-### Code Splitting
+1. Generate full static build for production:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run build
 
-### Analyzing the Bundle Size
+#or
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+yarn build
+```
 
-### Making a Progressive Web App
+2. To preview the site as it'll appear after deployed:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run serve
 
-### Advanced Configuration
+#or
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+yarn serve
+```
