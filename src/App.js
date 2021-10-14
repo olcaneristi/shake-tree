@@ -59,7 +59,7 @@ const App = () => {
 
   const resetAllState = () => {
     try {
-      if (allApples.length < 10) {
+      if (allApples?.length < 10) {
         dispatch(resetAll());
         toast.success('Reset successfully!');
       } else toast.warning('All your apples on the tree. Please shake it!');
@@ -69,9 +69,9 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className={`app ${allApples?.length === 0 ? 'autumn' : 'summer'}`}>
       <ToastContainer autoClose={3000} />
-      <Tree shakeTree={shakeTree} />{' '}
+      <Tree shakeTree={shakeTree} />
       {/* ağacın sallanması/durması için state'i Tree componentine yolladık ve className değişimi sağladık. */}
       <Basket />
       <div className="buttons">
