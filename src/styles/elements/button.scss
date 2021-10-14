@@ -7,6 +7,8 @@
   cursor: pointer;
   transition: all 200ms ease-in-out;
   width: 8rem;
+  opacity: 0;
+  animation: buttonFadeIn 0.5s 1.8s ease-in forwards;
 
   &__shake,
   &__shake--disabled,
@@ -23,8 +25,9 @@
     color: $color-white;
 
     &--disabled {
-      background-color: rgb(179, 75, 75) !important;
-      color: $color-gray;
+      background-color: $bg-button-disabled !important;
+      box-shadow: -1px 1px 8px 7px rgb(74 61 61 / 40%);
+      color: $color-white;
       width: unset;
     }
   }
@@ -41,5 +44,16 @@
   img {
     width: 16px;
     margin-right: 0.5rem;
+  }
+}
+
+@keyframes buttonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

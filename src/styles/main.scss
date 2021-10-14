@@ -9,16 +9,45 @@
   font-family: $font-default;
 }
 
-.App {
-  background-color: $bg-primary-color;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: 110%;
+
+  &.summer,
+  &.autumn {
+    opacity: 0.5;
+    transition: all 200ms ease-in;
+    animation: welcome 200ms ease-in-out forwards;
+  }
+
+  &.summer {
+    background-image: url(../assets/images/bg-summer.png);
+  }
+
+  &.autumn {
+    background-image: url(../assets/images/bg-autumn.png);
+  }
 
   .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@keyframes welcome {
+  0% {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
