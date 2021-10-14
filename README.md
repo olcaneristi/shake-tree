@@ -29,8 +29,9 @@ talk to each other with local state or redux.
 ## 📷 Screenshot
 
 <div align="center">
-  <img alt="Demo" src="https://user-images.githubusercontent.com/45832621/137198870-9e8cb12f-dd56-48ab-a4ad-5bba48ab3378.gif"/>
+  <img alt="Demo" src="https://user-images.githubusercontent.com/45832621/137315771-af4f2ac4-d9b2-4c29-961e-a5280cf53fa1.gif"/>
 </div>
+
 
 ## 🗳️ Checklist
 
